@@ -1,0 +1,42 @@
+<p>
+  gestion works!
+</p>
+<div class = "form-group" >
+  <label for=""> title:</label>
+  <input class = "form-control" [(ngModel)] ="produit.title">
+</div>
+  <div class = "form-group" >
+      <label for=""> description :</label>
+      <input class = "form-control" [(ngModel)] ="produit.description">
+    
+    
+    </div>
+   <!---- <div class = "form-group"  *ngIf = "nom == 'jamel'">-->
+      <div class = "form-group"  >
+        <label for=""> price:</label>
+        <input class = "form-control" [(ngModel)] ="produit.price">
+      
+      
+      </div>
+      <div class = "form-group"  >
+        <label for=""> Type:</label>
+        <select class = "form-control" [(ngModel)] ="produit.product_type">
+          <option value = "cosmotique"> Cosmotique</option>
+          <option value = "vestimentaire"> Vestimentaire</option>
+          <option value = "alimentaire"> alimentaire</option>
+      </select>
+      </div>
+
+    <!----  <div class = "form-group" >
+          <label for=""> about:</label>
+          <input class = "form-control" [(ngModel)] ="about">
+        
+        
+        </div>-->
+        <button *ngIf = " idproduit == undefined" class=" btn btn-success"   (click) = "save()">
+          
+          save
+        </button>
+        <button *ngIf = " idproduit != undefined"  class=" btn btn-success"   (click) = "update()">
+          update
+          </button>

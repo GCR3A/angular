@@ -1,0 +1,58 @@
+<p>
+  dashboard works!
+</p>
+<h2>{{'hello'|translate}}</h2>
+<table class ="table">
+    <thead>
+                  <tr>
+                    <th>
+                        title
+                    </th>
+                    <th>
+                     description
+                   
+                   
+                    </th>
+                    <th>
+                        price
+                      
+                      
+                       </th>
+                       <th>
+                          type
+                        
+                        
+                         </th>
+                         <th>
+                            action
+                          
+                          
+                           </th>
+                  </tr>
+                  
+                </thead>
+                <tbody>
+                  <tr *ngFor = "let p of produits" >
+                             <td>
+                      {{p.title}}
+                    </td>
+                    <td>
+                      {{p.description }}
+                    </td>
+                    <td>
+                      {{p.price }}
+                    </td>
+                    <td>
+                        {{p.product_type }}
+                      </td>
+                      <td>
+                        <button class="btn btn-success" (click)="gestion(p._id)">
+                            Edit
+                        </button>
+                        <button class="btn btn-danger" (click) ="delete(p._id)">
+                            Delete
+                        </button>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>

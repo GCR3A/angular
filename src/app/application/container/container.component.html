@@ -1,0 +1,110 @@
+<div class = "form-group" >
+  <label for=""> Name :</label>
+  <input class = "form-control" value ="{{imageUrl}}">
+
+
+</div>
+<img [src] = "imageUrl"/>
+<button class=" btn btn-success"  (click) = "increment()">
+increment 
+</button>
+<input  value = "{{count}}">
+<button class="btn btn-danger" (click) = "decrement()">
+   decrement 
+    </button>
+
+    <div class = "form-group" >
+    <label for=""> ngmodel:</label>
+  <input class = "form-control" [(ngModel)] ="message">
+</div>
+
+<button class=" btn btn-success"   (click) = "display()">
+NGMODEL
+</button>
+<div class = "form-group" >
+    <label for=""> Nom:</label>
+    <input class = "form-control" [(ngModel)] ="nom">
+</div>
+    <div class = "form-group" >
+        <label for=""> email :</label>
+        <input class = "form-control" [(ngModel)] ="email">
+      
+      
+      </div>
+     <!---- <div class = "form-group"  *ngIf = "nom == 'jamel'">-->
+        <div class = "form-group"  >
+          <label for=""> phone:</label>
+          <input class = "form-control" [(ngModel)] ="phone">
+        
+        
+        </div>
+
+      <!----  <div class = "form-group" >
+            <label for=""> about:</label>
+            <input class = "form-control" [(ngModel)] ="about">
+          
+          
+          </div>-->
+          <button class=" btn btn-success"   (click) = "valider()">
+            valider
+          </button>
+<!----
+          <table class ="table">
+<thead>
+              <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+               name
+               <input class ="form-control" [(ngModel)]="item">
+               
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor = "let h of heroes|search:item" [ngClass] = " {red:h.id == 1 , black:h.id == 2 }">
+                <td>
+                  {{h.id}}
+                </td>
+                <td>
+                  {{h.name }}
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        -->
+    <!----    {{date |date: 'M/d/yy'}}-->
+                <table class ="table">
+<thead>
+              <tr>
+                <th>
+                    nom
+                </th>
+                <th>
+                 email
+               
+               
+                </th>
+                <th>
+                    phone
+                  
+                  
+                   </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor = "let p of personnes|phone:item" [ngClass]>
+                <td>
+                  {{p.nom}}
+                </td>
+                <td>
+                  {{p.email }}
+                </td>
+                <td>
+                  {{p.phone }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
